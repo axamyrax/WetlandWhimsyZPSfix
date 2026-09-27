@@ -188,3 +188,8 @@ idea {
         downloadJavadoc = true
     }
 }
+tasks.named('jar', Jar).configure {
+    manifest {
+        attributes(['MixinConfigs': 'brushablecompat.mixins.json'] as Map)
+    }
+}
